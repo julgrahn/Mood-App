@@ -14,6 +14,9 @@
             Button:
                 text: "Login"
                 on_press: root.loginUser(root.ids.username.text, root.ids.password.text)
+            Label:
+                id: loginWrong
+                text: ""
         GridLayout:
             cols: 2
             Button:
