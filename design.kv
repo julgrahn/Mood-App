@@ -10,9 +10,11 @@
                 font_size: '20sp'
             TextInput:
                 id: username
+                font_size: '25sp'
                 hint_text: "Username"
             TextInput:
                 id: password
+                font_size: '25sp'
                 password: True
                 hint_text: "Password"
             RelativeLayout:
@@ -50,9 +52,11 @@
             text: "Sign up!"
         TextInput:
             id: username
+            font_size: '25sp'
             hint_text: "Username"
         TextInput:
             id: password
+            font_size: '25sp'
             hint_text: "Password"
         Button:
             text: "Submit"
@@ -60,6 +64,10 @@
 <SignUpScreenSuccess>:
     GridLayout:
         cols: 1
+        padding: 20, 20
+        spacing: 20, 20
+        size_hint: 1.0, 0.65
+        pos_hint: {'center_x': 0.5, 'center_y': 0.6}
         Label:
             text: "Sign up successful!"
         Button:
@@ -85,9 +93,13 @@
         Button:
             text: "Enlighten me"
             on_press: root.getQuote(root.ids.feeling.text)
-        Label:
-            id: quote
-            text: ""
+        ScrollView:               
+            Label:
+                id: quote
+                text: ""
+                text_size: self.width, None
+                size_hint_y: None
+                height: self.texture_size[1]
 
 <RootWidget>:
     LoginScreen:
