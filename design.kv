@@ -32,9 +32,12 @@
                 text: "Forgot Password?"
                 background_color: 1, 1, 1, 0
                 opacity: 1 if self.state == 'normal' else 0.5
+                color: 0.1, 0.7, 1, 1
             Button:
                 text: "Sign Up"
                 background_color: 1, 1, 1, 0
+                opacity: 1 if self.state == 'normal' else 0.5
+                color: 0.1, 0.7, 1, 1
                 on_press: root.signUp()
 <SignUpScreen>:
     GridLayout:
