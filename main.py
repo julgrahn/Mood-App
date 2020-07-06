@@ -29,6 +29,11 @@ class SignUpScreenSuccess(Screen):
         self.manager.transition.direction = 'right'
         self.manager.current = "loginScreen"
 
+class LoginScreenSuccess(Screen):
+    def logout(self):
+        self.manager.transition.direction = 'right'
+        self.manager.current = "loginScreen"
+
 class MainApp(App):
     def build(self):
         return RootWidget()

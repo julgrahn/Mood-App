@@ -41,6 +41,20 @@
             text: "Login page"
             on_press: root.goToLogin()
 
+<LoginScreenSuccess>:
+    GridLayout:
+        cols: 1
+        Button:
+            text: "Logout"
+            on_press: logout()
+        Label:
+            text: "How do you feel?"
+        TextInput:
+            hint_text: "try: happy, sad, unloved..."
+        Button:
+            text: "Enlighten me"
+        Label:
+            text: ""
 <RootWidget>:
     LoginScreen:
         name: "loginScreen"
@@ -48,4 +62,6 @@
         name: "signUpScreen"
     SignUpScreenSuccess:
         name: "signUpScreenSuccess"
+    LoginScreenSuccess:
+        name: "loginSreenSuccess"
     
