@@ -32,9 +32,20 @@
         Button:
             text: "Submit"
             on_press: root.addUser(root.ids.username.text, root.ids.password.text)
+<SignUpScreenSuccess>:
+    GridLayout:
+        cols: 1
+        Label:
+            text: "Sign up successful!"
+        Button:
+            text: "Login page"
+            on_press: root.goToLogin()
 
 <RootWidget>:
     LoginScreen:
         name: "loginScreen"
     SignUpScreen:
         name: "signUpScreen"
+    SignUpScreenSuccess:
+        name: "signUpScreenSuccess"
+    

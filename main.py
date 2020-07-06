@@ -19,9 +19,14 @@ class SignUpScreen(Screen):
             users = json.load(file)
         users[uname] = {'username': uname, 'password': pword, 
                     'created': datetime.now().strftime("%Y-%m-%d %H:%M:%S")}
-                    
+
         with open("users.json", 'w') as file:
             json.dump(users, file)
+        self.manager.current = "signUpScreenSuccess"
+        
+class SignUpScreenSuccess(Screen):
+    def goToLogin(self):
+        self.manager.current = "loginScreen"
 
 class MainApp(App):
     def build(self):
